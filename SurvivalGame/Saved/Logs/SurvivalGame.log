@@ -1354,3 +1354,96 @@ LogConfig: Set CVar [[r.Nanite.Streaming.ReservedResources:1]]
 [2025.09.07-17.31.06:764][467]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3, StreamState=2
 [2025.09.07-17.31.06:770][467]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
 [2025.09.07-17.31.06:877][468]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2025.09.07-17.33.10:912][744]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.07-17.33.10:948][744]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.07-17.33.10:991][744]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.07-17.33.10:991][744]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.07-17.33.10:991][744]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/BP_Character" FILE="D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset" SILENT=true
+[2025.09.07-17.33.11:096][744]LogSavePackage: Moving output files for package: /Game/Characters/BP_Character
+[2025.09.07-17.33.11:096][744]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character34FEFF2B4649721E4658868C9B97CC23.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset'
+[2025.09.07-17.33.11:108][744]LogFileHelpers: InternalPromptForCheckoutAndSave took 195.787 ms (total: 818.384 ms)
+[2025.09.07-17.33.11:135][744]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.07-17.33.11:135][744]LogContentValidation: Enabled validators:
+[2025.09.07-17.33.11:135][744]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.07-17.33.11:135][744]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.07-17.33.11:135][744]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.07-17.33.11:135][744]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.07-17.33.11:135][744]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.07-17.33.11:135][744]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.07-17.33.11:135][744]AssetCheck: /Game/Characters/BP_Character Validating asset
+[2025.09.07-17.33.12:803][932]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.09.07-17.33.12:814][932]LogPlayLevel: [PlayLevel] Compiling BP_Character before play...
+[2025.09.07-17.33.12:873][932]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2025.09.07-17.33.12:874][932]LogPlayLevel: PlayLevel: Blueprint regeneration took 61 ms (1 blueprints)
+[2025.09.07-17.33.12:911][932]LogPlayLevel: Display: Creating online subsystem for client :Context_9
+[2025.09.07-17.33.12:913][932]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2025.09.07-17.33.12:928][933]LogPlayLevel: Creating play world package: /Game/Scenes/UEDPIE_0_MainWorld
+[2025.09.07-17.33.12:930][933]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002013s)
+[2025.09.07-17.33.12:930][933]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Scenes/MainWorld.MainWorld to /Game/Scenes/UEDPIE_0_MainWorld.MainWorld (0.002066s)
+[2025.09.07-17.33.12:955][933]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2025.09.07-17.33.12:956][933]LogChaosDD: Creating Chaos Debug Draw Scene for world MainWorld
+[2025.09.07-17.33.12:957][933]LogPlayLevel: PIE: World Init took: (0.001409s)
+[2025.09.07-17.33.12:958][933]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.09.07-17.33.12:958][933]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.09.07-17.33.12:958][933]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.09.07-17.33.12:958][933]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.09.07-17.33.12:958][933]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.09.07-17.33.12:958][933]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.09.07-17.33.12:960][933]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.09.07-17.33.12:977][933]LogAudioMixer: Display: Using Audio Hardware Device Headphones (My Headphones)
+[2025.09.07-17.33.12:977][933]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.09.07-17.33.12:977][933]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.09.07-17.33.12:977][933]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.09.07-17.33.12:977][933]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.09.07-17.33.12:977][933]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.09.07-17.33.12:980][933]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.09.07-17.33.12:980][933]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.09.07-17.33.12:980][933]LogInit: FAudioDevice initialized with ID 4.
+[2025.09.07-17.33.12:980][933]LogAudio: Display: Audio Device (ID: 4) registered with world 'MainWorld'.
+[2025.09.07-17.33.12:980][933]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.09.07-17.33.12:984][933]LogLoad: Game class is 'SurvivalGameMode_C'
+[2025.09.07-17.33.12:984][933]LogWorld: Bringing World /Game/Scenes/UEDPIE_0_MainWorld.MainWorld up for play (max tick rate 0) at 2025.09.07-13.33.12
+[2025.09.07-17.33.12:984][933]LogWorld: Bringing up level for play took: 0.000571
+[2025.09.07-17.33.12:987][933]PIE: Server logged in
+[2025.09.07-17.33.12:989][933]PIE: Play in editor total start time 0.176 seconds.
+[2025.09.07-17.33.13:033][934]LogRenderer: Recreating Persistent SBTs due to initializer changes: 
+		NumShaderSlotsPerGeometrySegment changed: current: 1 - new: 2
+		NumGeometrySegments changed: current: 0 - new: 512
+[2025.09.07-17.33.18:201][544]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.07-17.33.18:201][544]LogWorld: BeginTearingDown for /Game/Scenes/UEDPIE_0_MainWorld
+[2025.09.07-17.33.18:201][544]LogWorld: UWorld::CleanupWorld for MainWorld, bSessionEnded=true, bCleanupResources=true
+[2025.09.07-17.33.18:201][544]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.07-17.33.18:203][544]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.09.07-17.33.18:207][544]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.09.07-17.33.18:231][544]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.09.07-17.33.18:231][544]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.09.07-17.33.18:231][544]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=4
+[2025.09.07-17.33.18:232][544]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4, StreamState=2
+[2025.09.07-17.33.18:239][544]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2025.09.07-17.33.18:276][545]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2025.09.07-17.33.30:710][734]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.07-17.33.30:750][734]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.07-17.33.30:793][734]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.07-17.33.30:793][734]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.07-17.33.30:793][734]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/BP_Character" FILE="D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset" SILENT=true
+[2025.09.07-17.33.30:815][734]LogSavePackage: Moving output files for package: /Game/Characters/BP_Character
+[2025.09.07-17.33.30:826][734]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_CharacterF5982FE849DA8558938F808B004DE1D0.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset'
+[2025.09.07-17.33.30:837][734]LogFileHelpers: InternalPromptForCheckoutAndSave took 127.042 ms (total: 945.426 ms)
+[2025.09.07-17.33.30:869][734]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.07-17.33.30:869][734]LogContentValidation: Enabled validators:
+[2025.09.07-17.33.30:869][734]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.07-17.33.30:869][734]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.07-17.33.30:869][734]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.07-17.33.30:869][734]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.07-17.33.30:869][734]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.07-17.33.30:869][734]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.07-17.33.30:869][734]AssetCheck: /Game/Characters/BP_Character Validating asset
+[2025.09.07-17.34.37:304][729]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1019.630859
+[2025.09.07-17.34.38:304][732]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.07-17.34.38:305][732]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1020.297180, Update Interval: 324.093750
