@@ -10,6 +10,9 @@
 				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset",
 				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Blueprints/NewGameMode.uasset",
 				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Blueprints/SurvivalGameMode.uasset",
+				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/UI/BP_HUD.uasset",
+				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/DataTypes/NewUserDefinedStruct.uasset",
+				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/DataTypes/Inventory.uasset",
 				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Materials/Grid.uasset",
 				"D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/B_PlayerController.uasset"
 			]
