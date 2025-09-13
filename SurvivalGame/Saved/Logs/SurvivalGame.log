@@ -1515,3 +1515,148 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.09.13-01.08.15:750][179]LogRenderer: Recreating Persistent SBTs due to initializer changes: 
 		NumShaderSlotsPerGeometrySegment changed: current: 1 - new: 2
 		NumGeometrySegments changed: current: 0 - new: 512
+[2025.09.13-01.09.51:960][216]LogBlueprint: Warning: [AssetLog] D:\SNHU\GAM-312 Gameplay Systems Development\Game Repo\Survival_Game\SurvivalGame\Content\Characters\BP_Character.uasset: [Compiler] Pasted node  CustomEvent   conflicted with  DepleteHunger  and was replaced as a Custom Event!
+[2025.09.13-01.10.29:007][611]LogBlueprint: Warning: [AssetLog] D:\SNHU\GAM-312 Gameplay Systems Development\Game Repo\Survival_Game\SurvivalGame\Content\Characters\BP_Character.uasset: [Compiler] Pasted node  CustomEvent   conflicted with  DepleteHunger  and was replaced as a Custom Event!
+[2025.09.13-01.10.29:008][611]LogBlueprint: Warning: [AssetLog] D:\SNHU\GAM-312 Gameplay Systems Development\Game Repo\Survival_Game\SurvivalGame\Content\Characters\BP_Character.uasset: [Compiler] Pasted node  CustomEvent_1   conflicted with  HungerRestored  and was replaced as a Custom Event!
+[2025.09.13-01.10.29:008][611]LogBlueprint: Warning: [AssetLog] D:\SNHU\GAM-312 Gameplay Systems Development\Game Repo\Survival_Game\SurvivalGame\Content\Characters\BP_Character.uasset: [Compiler] Pasted node  CustomEvent_2   conflicted with  CheckHunger  and was replaced as a Custom Event!
+[2025.09.13-01.11.22:836][733]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2025.09.13-01.12.29:395][ 23]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8497.501953
+[2025.09.13-01.12.29:510][ 32]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.12.29:510][ 33]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8497.603516, Update Interval: 334.115417
+[2025.09.13-01.15.00:471][ 85]LogSlate: Window 'Delete Variable' being destroyed
+[2025.09.13-01.15.20:972][736]LogEditorTransaction: Undo Create Pin Link
+[2025.09.13-01.15.21:276][743]LogEditorTransaction: Undo Create Pin Link
+[2025.09.13-01.15.21:705][765]LogEditorTransaction: Undo Add Node
+[2025.09.13-01.15.22:122][791]LogEditorTransaction: Undo Remove Variable
+[2025.09.13-01.15.22:689][827]LogEditorTransaction: Undo Rename Variable
+[2025.09.13-01.18.42:606][932]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8871.132812
+[2025.09.13-01.18.42:698][940]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.18.42:698][941]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8871.211914, Update Interval: 331.112396
+[2025.09.13-01.19.12:480][497]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2025.09.13-01.19.12:483][497]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Scenes/MainWorld' took 0.032
+[2025.09.13-01.19.12:483][497]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.19.12:529][497]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.19.12:530][497]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.19.12:646][497]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Characters/BP_Character_Auto7
+[2025.09.13-01.19.12:646][497]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character_Auto7E968943740E6023B6EC42DA2DC5517EF.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/Autosaves/Game/Characters/BP_Character_Auto7.uasset'
+[2025.09.13-01.19.12:647][497]LogFileHelpers: Auto-saving content packages took 0.164
+[2025.09.13-01.25.13:313][532]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 9260.677734
+[2025.09.13-01.25.13:414][542]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.25.13:414][543]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 9260.768555, Update Interval: 338.402039
+[2025.09.13-01.25.29:615][246]LogSelectionDetails: Warning: NavigateToFunctionSource:  Unable to find source file and line number for 'UKismetMathLibrary::GreaterEqual_DoubleDouble' [Element not found.]
+[2025.09.13-01.29.20:733][ 22]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.13-01.29.20:770][ 22]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.29.20:812][ 22]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.29.20:812][ 22]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.29.20:812][ 22]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/BP_Character" FILE="D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset" SILENT=true
+[2025.09.13-01.29.21:132][ 22]LogSavePackage: Moving output files for package: /Game/Characters/BP_Character
+[2025.09.13-01.29.21:132][ 22]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character14A326334C1949929E8B159A80C23948.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset'
+[2025.09.13-01.29.21:145][ 22]LogFileHelpers: InternalPromptForCheckoutAndSave took 411.436 ms (total: 2.06 sec)
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: Enabled validators:
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.13-01.29.21:177][ 22]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.13-01.29.21:177][ 22]AssetCheck: /Game/Characters/BP_Character Validating asset
+[2025.09.13-01.30.18:018][179]LogSlate: Window 'Color Picker' being destroyed
+[2025.09.13-01.30.49:758][958]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2025.09.13-01.30.49:762][958]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Scenes/MainWorld' took 0.032
+[2025.09.13-01.30.49:762][958]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.30.49:800][958]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.30.49:800][958]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.30.49:933][958]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Characters/BP_Character_Auto8
+[2025.09.13-01.30.49:933][958]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character_Auto865735F7F4B69F5B41F4E97B7565B0EE2.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/Autosaves/Game/Characters/BP_Character_Auto8.uasset'
+[2025.09.13-01.30.49:935][958]LogFileHelpers: Auto-saving content packages took 0.174
+[2025.09.13-01.31.44:012][799]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 9651.423828
+[2025.09.13-01.31.45:013][802]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.31.45:013][802]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 9652.090820, Update Interval: 323.207489
+[2025.09.13-01.34.57:469][627]LogEditorTransaction: Undo Create Reroute Node
+[2025.09.13-01.37.58:867][693]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10025.782227
+[2025.09.13-01.37.58:982][703]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.37.58:982][704]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10025.885742, Update Interval: 331.339447
+[2025.09.13-01.41.42:423][665]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2025.09.13-01.41.42:424][665]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Scenes/MainWorld' took 0.031
+[2025.09.13-01.41.42:424][665]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.41.42:469][665]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.41.42:469][665]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.41.42:897][665]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Characters/BP_Character_Auto9
+[2025.09.13-01.41.42:897][665]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character_Auto90589265E45E142CB8BDDE9B30CF02405.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/Autosaves/Game/Characters/BP_Character_Auto9.uasset'
+[2025.09.13-01.41.42:898][665]LogFileHelpers: Auto-saving content packages took 0.474
+[2025.09.13-01.44.20:533][673]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10408.075195
+[2025.09.13-01.44.21:533][676]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.44.21:533][677]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10408.742188, Update Interval: 317.457794
+[2025.09.13-01.48.31:018][646]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2025.09.13-01.48.31:995][722]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.13-01.48.32:030][722]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.48.32:075][722]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.48.32:075][722]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.48.32:075][722]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/BP_Character" FILE="D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset" SILENT=true
+[2025.09.13-01.48.32:162][722]LogSavePackage: Moving output files for package: /Game/Characters/BP_Character
+[2025.09.13-01.48.32:163][722]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character03216B58455D688869849E864EAEC924.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset'
+[2025.09.13-01.48.32:173][722]LogFileHelpers: InternalPromptForCheckoutAndSave took 177.658 ms (total: 2.24 sec)
+[2025.09.13-01.48.32:211][722]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.13-01.48.32:211][722]LogContentValidation: Enabled validators:
+[2025.09.13-01.48.32:211][722]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.13-01.48.32:211][722]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.13-01.48.32:211][722]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.13-01.48.32:211][722]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.13-01.48.32:211][722]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.13-01.48.32:211][722]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.13-01.48.32:211][722]AssetCheck: /Game/Characters/BP_Character Validating asset
+[2025.09.13-01.48.36:799][131]LogSlate: External Image Picker: DecompressImage failed
+[2025.09.13-01.48.55:893][398]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.13-01.48.55:901][398]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.13-01.50.17:104][205]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10764.511719
+[2025.09.13-01.50.17:208][217]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.09.13-01.50.17:208][218]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10764.608398, Update Interval: 329.753723
+[2025.09.13-01.50.49:083][280]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2025.09.13-01.50.49:925][344]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.13-01.50.49:959][344]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.50.50:001][344]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.50.50:001][344]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.50.50:001][344]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/BP_Character" FILE="D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset" SILENT=true
+[2025.09.13-01.50.50:125][344]LogSavePackage: Moving output files for package: /Game/Characters/BP_Character
+[2025.09.13-01.50.50:126][344]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_CharacterD1794FD2410B26BE8B8D44B907F9A911.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset'
+[2025.09.13-01.50.50:136][344]LogFileHelpers: InternalPromptForCheckoutAndSave took 211.518 ms (total: 2.45 sec)
+[2025.09.13-01.50.50:165][344]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.13-01.50.50:165][344]LogContentValidation: Enabled validators:
+[2025.09.13-01.50.50:165][344]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.13-01.50.50:165][344]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.13-01.50.50:165][344]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.13-01.50.50:165][344]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.13-01.50.50:165][344]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.13-01.50.50:165][344]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.13-01.50.50:165][344]AssetCheck: /Game/Characters/BP_Character Validating asset
+[2025.09.13-01.52.48:575][498]LogDerivedDataCache: C:/Users/stone/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.09.13-01.53.34:595][449]LogSlate: External Image Picker: DecompressImage failed
+[2025.09.13-01.54.23:084][488]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.13-01.54.23:093][488]LogSlate: Window 'Project Settings' being destroyed
+[2025.09.13-01.54.48:378][689]LogUObjectHash: Compacting FUObjectHashTables data took   1.30ms
+[2025.09.13-01.54.48:379][689]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Scenes/MainWorld' took 0.030
+[2025.09.13-01.54.48:380][689]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.54.48:474][689]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.54.48:474][689]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.54.48:531][689]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Characters/BP_Character_Auto0
+[2025.09.13-01.54.48:531][689]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_Character_Auto0A6A3F5574B11DAFE58A0E59461FF281C.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/Autosaves/Game/Characters/BP_Character_Auto0.uasset'
+[2025.09.13-01.54.48:531][689]LogFileHelpers: Auto-saving content packages took 0.152
+[2025.09.13-01.54.51:039][697]LogUObjectHash: Compacting FUObjectHashTables data took   1.15ms
+[2025.09.13-01.54.51:782][724]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.09.13-01.54.51:815][724]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Characters/BP_Character] ([2] browsable assets)...
+[2025.09.13-01.54.51:850][724]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Characters/BP_Character.BP_Character]
+[2025.09.13-01.54.51:850][724]OBJ SavePackage: Finished generating thumbnails for package [/Game/Characters/BP_Character]
+[2025.09.13-01.54.51:850][724]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Characters/BP_Character" FILE="D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset" SILENT=true
+[2025.09.13-01.54.51:899][724]LogSavePackage: Moving output files for package: /Game/Characters/BP_Character
+[2025.09.13-01.54.51:899][724]LogSavePackage: Moving 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Saved/BP_CharacterAF0BD17842A30AB52BE497AD760A928F.tmp' to 'D:/SNHU/GAM-312 Gameplay Systems Development/Game Repo/Survival_Game/SurvivalGame/Content/Characters/BP_Character.uasset'
+[2025.09.13-01.54.51:909][724]LogFileHelpers: InternalPromptForCheckoutAndSave took 126.830 ms (total: 2.57 sec)
+[2025.09.13-01.54.51:938][724]LogContentValidation: Display: Starting to validate 1 assets
+[2025.09.13-01.54.51:938][724]LogContentValidation: Enabled validators:
+[2025.09.13-01.54.51:938][724]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.09.13-01.54.51:938][724]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.09.13-01.54.51:938][724]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.09.13-01.54.51:938][724]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.09.13-01.54.51:938][724]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.09.13-01.54.51:938][724]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.09.13-01.54.51:938][724]AssetCheck: /Game/Characters/BP_Character Validating asset
