@@ -116,63 +116,65 @@ void ACPP_Character::MoveRight(float AxisValue)
 	AddMovementInput(Direction, AxisValue);
 }
 
-void ACPP_Character::Interact()
+void ACPP_Character::FindObject()
 {
 	FVector startLocation = GetMesh()->GetBoneLocation("head");
-	FVector endLocation = startLocation + PlayerCam->GetForwardVector() * 300.0f;
+	FVector endLocation = startLocation + PlayerCam->GetForwardVector() * 400.0f;
 	
 	FHitResult HitResult;
 	FCollisionQueryParams QueryParams;
 	QueryParams.AddIgnoredActor(this);
 	QueryParams.bTraceComplex = true;
 
-	bool hit = GetWorld()->LineTraceSingleByChannel(
-		HitResult,
-		startLocation,
-		endLocation,
-		ECC_WorldDynamic,
-		QueryParams
-	);
+	if (!isBuilding) {
+		bool hit = GetWorld()->LineTraceSingleByChannel(
+			HitResult,
+			startLocation,
+			endLocation,
+			ECC_WorldDynamic,
+			QueryParams
+		);
 
-	DrawDebugLine(
-		GetWorld(),            // The UWorld instance
-		startLocation,         // FVector for the line's start point
-		endLocation,           // FVector for the line's end point
-		hit ? FColor::Green : FColor::Red,                 // FColor for the line's color
-		true,      // bool: true for persistent lines, false for temporary
-		-1,              // float: duration in seconds if not persistent (-1 for indefinite)
-		0,         // uint8: rendering priority (0 for default)
-		2.0f              // float: line thickness
-	);
+		/*
+		DrawDebugLine(
+			GetWorld(),            // The UWorld instance
+			startLocation,         // FVector for the line's start point
+			endLocation,           // FVector for the line's end point
+			hit ? FColor::Green : FColor::Red,                 // FColor for the line's color
+			true,      // bool: true for persistent lines, false for temporary
+			-1,              // float: duration in seconds if not persistent (-1 for indefinite)
+			0,         // uint8: rendering priority (0 for default)
+			2.0f              // float: line thickness
+		);
+		*/
 
-	if (hit) {
-		AActor* hitActor = HitResult.GetActor();
-		UClass* uClass = hitActor->GetClass();
-		bool isImplemented = uClass->ImplementsInterface(UPickup::StaticClass());
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, isImplemented ? FColor::Cyan : FColor::Red,
-			uClass->GetAuthoredName() + FString(" " + isImplemented ? "true" : "false"));
-		if (isImplemented) {
-			IPickup* pickup = Cast<IPickup, AActor>(hitActor);
-			FPickupReturn pickupReturn = pickup->Pickup(hitActor);
-			switch (pickupReturn.Type) {
-			case EPickupType::Berry:
-				Inventory.Berries += pickupReturn.Quantity;
-				break;
-			case EPickupType::Stone:
-				Inventory.Stone += pickupReturn.Quantity;
-				break;
-			case EPickupType::Wood:
-				Inventory.Wood += pickupReturn.Quantity;
-				break;
+		if (hit) {
+			AActor* hitActor = HitResult.GetActor();
+			UClass* uClass = hitActor->GetClass();
+			bool isImplemented = uClass->ImplementsInterface(UPickup::StaticClass());
+			GEngine->AddOnScreenDebugMessage(-1, 5.0f, isImplemented ? FColor::Cyan : FColor::Red,
+				uClass->GetAuthoredName() + FString(" " + isImplemented ? "true" : "false"));
+			if (isImplemented) {
+				IPickup* pickup = Cast<IPickup, AActor>(hitActor);
+				FPickupReturn pickupReturn = pickup->Pickup(hitActor);
+				switch (pickupReturn.Type) {
+				case EPickupType::Berry:
+					Inventory.Berries += pickupReturn.Quantity;
+					break;
+				case EPickupType::Stone:
+					Inventory.Stone += pickupReturn.Quantity;
+					break;
+				case EPickupType::Wood:
+					Inventory.Wood += pickupReturn.Quantity;
+					break;
+				}
+				InventoryChanged.Broadcast(Inventory);
 			}
-			InventoryChanged.Broadcast(Inventory);
 		}
 	}
-}
-
-void ACPP_Character::Use()
-{
-
+	else {
+		isBuilding = false;
+	}
 }
 
 void ACPP_Character::StartSprinting()
@@ -228,6 +230,53 @@ void ACPP_Character::StaminaRegainTimeline(float Value)
 	StaminaChanged.Broadcast(FMath::Lerp(0.0f, 20.0f, staminaRechargeCounter / staminaRechargeTime));
 }
 
+void ACPP_Character::UpdateResources(FPlayerInventory inventory, EBuildingType buildingType)
+{
+	if (Inventory.Wood < inventory.Wood || Inventory.Stone < inventory.Stone) return;
+	Inventory.Wood -= inventory.Wood;
+	Inventory.Stone -= inventory.Stone;
+	switch (buildingType)
+	{
+	case EBuildingType::Wall:
+		BuildingArray[0]++;
+		break;
+	case EBuildingType::Floor:
+		BuildingArray[1]++;
+		break;
+	case EBuildingType::Ceiling:
+		BuildingArray[2]++;
+		break;
+	}
+	InventoryChanged.Broadcast(Inventory);
+}
+
+void ACPP_Character::SpawnBuilding(int buildingID, bool& isSuccess)
+{
+	if (!isBuilding) {
+		if (BuildingArray[buildingID] >= 1) {
+			isBuilding = true;
+			FActorSpawnParameters SpawnParam;
+			FVector startLocation = GetMesh()->GetBoneLocation("head");
+			FVector endLocation = startLocation + PlayerCam->GetForwardVector() * 600.0f;
+			FRotator myRot(0, 0, 0);
+
+			BuildingArray[buildingID]--;
+
+			spawnedPart = GetWorld()->SpawnActor<ABuildingPart>(BuildPartClass, endLocation, myRot, SpawnParam);
+
+			isSuccess = true;
+		}
+		isSuccess = false;
+	}
+}
+
+void ACPP_Character::RotateBuilding()
+{
+	if (isBuilding) {
+		spawnedPart->AddActorWorldRotation(FRotator(0, 45, 0));
+	}
+}
+
 // Sets default values
 ACPP_Character::ACPP_Character()
 {
@@ -239,6 +288,8 @@ ACPP_Character::ACPP_Character()
 	PlayerCam->SetupAttachment(GetMesh(), "head");
 	PlayerCam->bUsePawnControlRotation = true;
 	PlayerCam->SetRelativeLocation(cameraOffset);
+
+	BuildingArray.SetNum(3);
 }
 
 // Called when the game starts or when spawned
@@ -267,6 +318,15 @@ void ACPP_Character::Tick(float DeltaTime)
 		StaminaRegainTimeline(DeltaTime);
 	if (isHungry)
 		HungerDamageTimeline(DeltaTime);
+
+	if (isBuilding) {
+		if (spawnedPart) {
+			FVector startLocation = GetMesh()->GetBoneLocation("head");
+			FVector endLocation = startLocation + PlayerCam->GetForwardVector() * 600.0f;
+
+			spawnedPart->SetActorLocation(endLocation);
+		}
+	}
 }
 
 // Called to bind functionality to input
@@ -277,10 +337,10 @@ void ACPP_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis(FName("MoveRight"), this, &ACPP_Character::MoveRight);
 	PlayerInputComponent->BindAxis(FName("LookUp"), this, &ACPP_Character::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis(FName("LookRight"), this, &ACPP_Character::AddControllerYawInput);
-	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ACPP_Character::Interact);
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ACPP_Character::FindObject);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACPP_Character::StartJumping);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACPP_Character::EndJumping);
-	PlayerInputComponent->BindAction("Use", IE_Pressed, this, &ACPP_Character::Use);
+	PlayerInputComponent->BindAction("Rotate", IE_Pressed, this, &ACPP_Character::RotateBuilding);
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ACPP_Character::StartSprinting);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ACPP_Character::EndSprinting);
 }

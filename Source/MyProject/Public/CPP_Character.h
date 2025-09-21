@@ -7,6 +7,8 @@
 #include <Camera/CameraComponent.h>
 #include "Components/ArrowComponent.h"
 #include "CPP_PlayerInventory.h"
+#include "BuildingType.h"
+#include "BuildingPart.h"
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
@@ -53,6 +55,15 @@ public:
 	/** Plays if the player has ran out of stamina and updates visual stamina every staminaRechargeTime seconds */
 	UFUNCTION()
 	void StaminaRegainTimeline(float Value);
+
+	UFUNCTION(BlueprintCallable)
+	void UpdateResources(FPlayerInventory inventory, EBuildingType buildingType);
+
+	UFUNCTION(BlueprintCallable)
+	void SpawnBuilding(int buildingID, bool& isSuccess);
+
+	UFUNCTION(BlueprintCallable)
+	void RotateBuilding();
 #pragma endregion
 
 	// ~~~~~~~~~~~~~~~~~ //
@@ -67,6 +78,9 @@ public:
 	float StaminaRegainCounter = 0.0f;
 	bool CanRegenerateStamina = true;
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Default")
+	bool isInventoryOpen = false;
+
 	/** Please add a variable description */
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Default")
 	bool ForceStaminaCharge = false;
@@ -74,6 +88,16 @@ public:
 	/** Please add a variable description */
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Movement")
 	UCapsuleComponent* Capsule;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Default")
+	FPlayerInventory Inventory;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Default")
+	TArray<int> BuildingArray;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Default")
+	TSubclassOf<ABuildingPart> BuildPartClass;
+
 #pragma endregion
 
 	// ~~~~~~~~~~~~~~~~~ //
@@ -155,11 +179,7 @@ private:
 
 	/** Please add a function description */
 	UFUNCTION()
-	void Interact();
-
-	/** Please add a function description */
-	UFUNCTION()
-	void Use();
+	void FindObject();
 
 	/** Please add a function description */
 	UFUNCTION()
@@ -181,6 +201,8 @@ private:
 	bool CanSprint = true;
 	bool IsMoving = false;
 	bool IsSprinting = false;
+	bool isBuilding = false;
+	ABuildingPart* spawnedPart;
 
 	float staminaRechargeTime = 6.0f;
 	float staminaRechargeCounter = 0.0f;
@@ -189,7 +211,6 @@ private:
 
 	FVector cameraOffset = FVector(0, 20, 0);
 
-	FPlayerInventory Inventory;
 	UCameraComponent* PlayerCam;
 
 #pragma endregion
