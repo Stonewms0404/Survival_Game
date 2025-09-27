@@ -30,6 +30,11 @@ void ACPP_Character::StaminaHealPlayer()
 	}
 }
 
+void ACPP_Character::EatFood()
+{
+	ConsumeFood(3.0f);
+}
+
 void ACPP_Character::StaminaRegain(float DeltaTime)
 {
 	if (ForceStaminaCharge) return;
@@ -338,6 +343,7 @@ void ACPP_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis(FName("LookUp"), this, &ACPP_Character::AddControllerPitchInput);
 	PlayerInputComponent->BindAxis(FName("LookRight"), this, &ACPP_Character::AddControllerYawInput);
 	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ACPP_Character::FindObject);
+	PlayerInputComponent->BindAction("Eat", IE_Pressed, this, &ACPP_Character::EatFood);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACPP_Character::StartJumping);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACPP_Character::EndJumping);
 	PlayerInputComponent->BindAction("Rotate", IE_Pressed, this, &ACPP_Character::RotateBuilding);

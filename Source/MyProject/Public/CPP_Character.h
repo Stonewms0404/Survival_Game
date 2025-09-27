@@ -145,6 +145,9 @@ private:
 	UFUNCTION()
 	void StaminaHealPlayer();
 
+	UFUNCTION()
+	void EatFood();
+
 	/** Regaining Stamina by not sprinting or using any action that will cost stamina. */
 	UFUNCTION()
 	void StaminaRegain(float DeltaTime);
