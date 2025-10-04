@@ -157,8 +157,8 @@ void ACPP_Character::FindObject()
 			AActor* hitActor = HitResult.GetActor();
 			UClass* uClass = hitActor->GetClass();
 			bool isImplemented = uClass->ImplementsInterface(UPickup::StaticClass());
-			GEngine->AddOnScreenDebugMessage(-1, 5.0f, isImplemented ? FColor::Cyan : FColor::Red,
-				uClass->GetAuthoredName() + FString(" " + isImplemented ? "true" : "false"));
+			//GEngine->AddOnScreenDebugMessage(-1, 5.0f, isImplemented ? FColor::Cyan : FColor::Red,
+			///	uClass->GetAuthoredName() + FString(" " + isImplemented ? "true" : "false"));
 			if (isImplemented) {
 				IPickup* pickup = Cast<IPickup, AActor>(hitActor);
 				FPickupReturn pickupReturn = pickup->Pickup(hitActor);
@@ -173,12 +173,17 @@ void ACPP_Character::FindObject()
 					Inventory.Wood += pickupReturn.Quantity;
 					break;
 				}
+				matsCollected += pickupReturn.Quantity;
+				objWidget->UpdatematOBJ(matsCollected);
 				InventoryChanged.Broadcast(Inventory);
 			}
 		}
 	}
 	else {
 		isBuilding = false;
+
+		objectsBuilt++;
+		objWidget->UpdatebuildOBJ(objectsBuilt);
 	}
 }
 
@@ -306,6 +311,11 @@ void ACPP_Character::BeginPlay()
 	HungerChanged.Broadcast(Hunger);
 	StaminaChanged.Broadcast(Stamina);
 	InventoryChanged.Broadcast(Inventory);
+
+	if (objWidget) {
+		objWidget->UpdatebuildOBJ(0.0f);
+		objWidget->UpdatematOBJ(0.0f);
+	}
 }
 
 // Called every frame

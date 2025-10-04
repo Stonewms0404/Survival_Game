@@ -9,6 +9,7 @@
 #include "CPP_PlayerInventory.h"
 #include "BuildingType.h"
 #include "BuildingPart.h"
+#include "ObjectiveWidget.h"
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
@@ -97,6 +98,15 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Default")
 	TSubclassOf<ABuildingPart> BuildPartClass;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UObjectiveWidget* objWidget;
+
+	UPROPERTY()
+	float objectsBuilt;
+
+	UPROPERTY()
+	float matsCollected;
 
 #pragma endregion
 
