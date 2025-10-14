@@ -85,7 +85,6 @@ void ACPP_Character::CheckHunger()
 {
 	if (Hunger <= 0.0f) {
 		Hunger = 0.0f;
-		DepleteHealth(1.0f);
 		isHungry = true;
 	}
 	else if (Hunger >= 20.0f) {
@@ -224,6 +223,7 @@ void ACPP_Character::HungerDamageTimeline(float Value)
 	if (hungerCounter >= hungerTime) {
 		isHungry = false;
 		hungerCounter = 0.0f;
+		DepleteHealth(1.0f);
 	}
 
 	CheckHunger();
