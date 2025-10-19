@@ -110,7 +110,7 @@ void ACPP_Character::EndJumping()
 void ACPP_Character::MoveForward(float AxisValue)
 {
 	GetCharacterMovement()->MaxWalkSpeed = IsSprinting && CanSprint ? 1200.0f : 600.0f;
-	FVector Direction = FRotationMatrix(GetArrowComponent()->GetComponentRotation()).GetScaledAxis(EAxis::X);
+	FVector Direction = FRotationMatrix(GetCapsuleComponent()->GetComponentRotation()).GetScaledAxis(EAxis::X);
 	AddMovementInput(Direction, AxisValue);
 }
 
